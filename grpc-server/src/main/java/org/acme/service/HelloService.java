@@ -12,7 +12,7 @@ public class HelloService implements Greeter {
     @Override
     public Uni<HelloReply> sayHello(HelloRequest request) {
         return Uni.createFrom().item(
-                HelloReply.newBuilder().setMessage("Hello".concat(request.getName())).build()
+                HelloReply.newBuilder().setMessage("Hello ".concat(request.getName())).build()
         );
     }
 }
